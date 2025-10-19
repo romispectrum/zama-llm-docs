@@ -1,5 +1,4 @@
-<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/a3ad496a-0d98-4101-b8b4-811587c95923" />
-
+<img width="939" height="658" alt="Screenshot 2025-10-19 at 5 51 57 AM" src="https://github.com/user-attachments/assets/80e9838c-af8f-4e64-81f0-2a3eee772539" />
 
 # 🧠 FHEVM Docs to LLM
 
