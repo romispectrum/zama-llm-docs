@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Download a docs/ folder from a GitHub 'tree' URL (if needed) and build a single llm.txt by
+Download a docs/ folder from a GitHub 'tree' URL (if needed) and build a single zama-llm.txt by
 concatenating all content under docs/.
 - Downloads only when the local root folder doesn't exist (or is empty).
 - Works with URLs like: https://github.com/<owner>/<repo>/tree/<branch>/<subpath>
@@ -146,8 +146,8 @@ def read_text_file(p: Path) -> str:
 def build_document(root: Path, files: List[Path]) -> str:
     parts: List[str] = []
     # Header
-    parts.append("# Combined Documentation\n")
-    parts.append(f"_Source directory:_ `{root.resolve()}`\n")
+    parts.append("# Zama FHEVM Combined Documentation\n")
+
     parts.append(make_toc(files, root))
 
     # Body
@@ -168,7 +168,6 @@ def build_document(root: Path, files: List[Path]) -> str:
         parts.append("")  # ensure trailing newline
 
     parts.append("\n---\n")
-    parts.append("_End of combined file._\n")
     return "\n".join(parts)
 
 # ---------------------------
@@ -176,11 +175,11 @@ def build_document(root: Path, files: List[Path]) -> str:
 # ---------------------------
 
 def main():
-    ap = argparse.ArgumentParser(description="Download docs/ from GitHub (if needed) and combine into llm.txt markdown.")
+    ap = argparse.ArgumentParser(description="Download docs/ from GitHub (if needed) and combine into zama-llm.txt markdown.")
     ap.add_argument("--root", "-r", type=Path, default=Path("docs"),
                     help="Root folder to scan or download into (default: ./docs)")
-    ap.add_argument("--out", "-o", type=Path, default=Path("llm.txt"),
-                    help="Output markdown file (default: ./llm.txt)")
+    ap.add_argument("--out", "-o", type=Path, default=Path("zama-llm.txt"),
+                    help="Output markdown file (default: ./zama-llm.txt)")
     ap.add_argument("--github", type=str, default=DEFAULT_GITHUB_TREE_URL,
                     help="GitHub tree URL to fetch docs from if --root is missing/empty "
                          f"(default: {DEFAULT_GITHUB_TREE_URL})")
