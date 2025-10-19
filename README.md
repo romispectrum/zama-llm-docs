@@ -1,3 +1,6 @@
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/a3ad496a-0d98-4101-b8b4-811587c95923" />
+
+
 # 🧠 FHEVM Docs to LLM
 
 This repository provides a Python utility that **downloads and compiles the Zama FHEVM documentation** into a single Markdown file (`llm.txt`) — perfect for importing into **Cursor**, or any other LLM-based development environment that accepts Markdown as context.
